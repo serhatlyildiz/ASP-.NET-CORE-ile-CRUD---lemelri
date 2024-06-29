@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width"/>
+        <title>Index</title>
+    </head>
+    <body>
+        <div style="background:#ccc;color:#000;width:100%">Serhat<b>YILDIZ</b></div>
+        <br />
+        <br />
+
+        <b>Tarih-Saat</b>@DateTime.Now
+
+        <br/>
+        <b>For Döngüsü</b>
+        @for(int i = 0; i < 10; i++)
+        {
+            <div style="background:green;color:#ffffff;width:100%">
+                @i
+            </div>
+        }
+
+        <br />
+        <br />
+        <br />
+        <b>ForEach Döngüsü</b>
+        @{
+            var list1 = new List<string>() { "Adana", "Ankara", "Düzce", "İstanbul" };
+        }
+
+        <table style="width=100%">
+        @foreach (var li in list1)
+        {
+            <tr style="background:red;color:#ffffff;width:100%;border-top:1px solid #ccc">
+                <td>@li</td>
+            </tr>
+        }
+</body>
+</html>

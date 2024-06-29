@@ -1,0 +1,34 @@
+﻿@model List<Proje1.Models.Kitap>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Kitap</title>
+        <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <h2>Kitap Listesi</h2>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Kitap Adı</th>
+                    <th>Yazar</th>
+                </tr>
+            </thead>
+            @foreach (var li in Model)
+            {
+                <tr>
+                    <td>@li.ID</td>
+                    <td>@li.KitapAdi</td>
+                    <td>@li.Yazar</td>
+                </tr>
+            }
+        </table>
+        <button class="btn btn-info">Kitap Ekle</button>
+    </body>
+</html>
